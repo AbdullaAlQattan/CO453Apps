@@ -4,7 +4,7 @@ namespace ConsoleAppProject.App01
 {
     /// <summary>
     /// This App will prompt the user to input a distance
-    /// measured in miles and it will calculate and
+    /// measured in miles, feet and meters and it will calculate and
     /// output the equivalent distance in feet.
     /// </summary>
     /// <author>
@@ -27,6 +27,7 @@ namespace ConsoleAppProject.App01
         ///  calculate it the same distance in feet, and output the distance
         ///  in feet.
         /// </summary>
+       
         public void MilesToFeet()
         {
             OutputHeading("Converting Miles to Feet");
@@ -50,7 +51,7 @@ namespace ConsoleAppProject.App01
             OutputHeading("Converting Miles to Meters");
 
             InputMiles();
-            CalculateMiles();
+            CalculateMeters();
             OutputMeters();
         }
 
@@ -60,12 +61,15 @@ namespace ConsoleAppProject.App01
         /// </summary>
 
 
-        private void OutputHeading(string title)
+        private void OutputHeading(String title)
         {
             Console.WriteLine("\n-------------------------------------");
             Console.WriteLine($"         {title}                     ");
             Console.WriteLine("         by Abdulla AlQattan         ");
             Console.WriteLine("-------------------------------------\n");
+
+            Console.WriteLine();
+            Console.WriteLine();
         }
 
         private double InputMiles()
@@ -136,8 +140,13 @@ namespace ConsoleAppProject.App01
         /// </summary>
         private void OutputMeters()
         {
-            Console.WriteLine(miles + " miles is " + " feet!");
+            Console.WriteLine(miles + " miles is " + meters + " meters!");
         }
+        /// <summary>
+        ///
+        /// 
+        /// </summary>
+
 
     }
 }
