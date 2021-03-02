@@ -22,13 +22,13 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.Beep();
 
-            //DistanceConverter converter = new DistanceConverter();
-            //converter.MilesToFeet();
-            //converter.FeetToMiles();
-            //converter.MilesToMeters();
+            DistanceConverter converter = new DistanceConverter();
+            converter.MilesToFeet();
+            converter.FeetToMiles();
+            converter.MilesToMeters();
 
-            BMI calculator = new BMI();
-            calculator.Run();
+            //BMI calculator = new BMI();
+            //calculator.Run();
 
         }
     }

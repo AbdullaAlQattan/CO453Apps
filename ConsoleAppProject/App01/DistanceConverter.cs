@@ -6,6 +6,10 @@ namespace ConsoleAppProject.App01
     /// This App will prompt the user to input a distance
     /// measured in miles, feet and meters and it will calculate and
     /// output the equivalent distance in feet.
+    ///
+    /// Need to upgarde the choosing of units
+    /// docutmation
+    /// testing 
     /// </summary>
     /// <author>
     /// Abdulla AlQattan version 0.3 
