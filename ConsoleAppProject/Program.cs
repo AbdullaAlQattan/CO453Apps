@@ -1,4 +1,5 @@
 ﻿using ConsoleAppProject.App01;
+using ConsoleAppProject.App02;
 using System;
 
 namespace ConsoleAppProject
@@ -21,10 +22,14 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.Beep();
 
-            DistanceConverter converter = new DistanceConverter();
-            converter.MilesToFeet();
-            converter.FeetToMiles();
-            converter.MilesToMeters();
+            //DistanceConverter converter = new DistanceConverter();
+            //converter.MilesToFeet();
+            //converter.FeetToMiles();
+            //converter.MilesToMeters();
+
+            BMI calculator = new BMI();
+            calculator.Run();
+
         }
     }
 }
