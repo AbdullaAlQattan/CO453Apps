@@ -5,7 +5,7 @@ namespace ConsoleAppProject.App01
     /// <summary>
     /// This App will prompt the user to input a distance
     /// measured in miles, feet and meters and it will calculate and
-    /// output the equivalent distance in feet.
+    /// output the equivalent distance in the other units specified by the user.
     ///
     /// Need to upgarde the choosing of units
     /// docutmation
@@ -17,13 +17,11 @@ namespace ConsoleAppProject.App01
     public class DistanceConverter
     {
         public const int FEET_IN_MILES = 5280;
-
         public const double METERS_IN_MILES = 1609.34;
+        public const double FEET_IN_METERS = 3.28084;
 
         private double miles;
-
         private double feet;
-
         private double meters;
 
         /// <summary>
@@ -75,6 +73,11 @@ namespace ConsoleAppProject.App01
             Console.WriteLine();
             Console.WriteLine();
         }
+        /// <summary>
+        ///  This method outputs the heading showing the title and name of the
+        ///  author.
+        /// </summary>
+
 
         private double InputMiles()
         {
@@ -99,7 +102,7 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// 
+        /// This method shows the input of the units and 
         /// </summary>
 
         private void CalculateFeet()
