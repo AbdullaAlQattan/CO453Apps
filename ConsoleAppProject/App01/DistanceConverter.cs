@@ -124,7 +124,7 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// 
+        /// This method is converting from miles to feet
         /// </summary>
         private void CalculateMiles()
         {
@@ -132,7 +132,7 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// 
+        /// This method is converting from feet to miles
         /// </summary>
         private void CalculateMeters()
         {
@@ -140,30 +140,30 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// 
+        /// This method is converting from miles to meteres
         /// </summary>
         private void OutputFeet()
         {
-            Console.WriteLine(miles + " miles is " + feet + " feet! ");
+            Console.WriteLine( feet + " feet! ");
         }
 
         /// <summary>
-        /// 
+        /// This method is displaying output in feet
         /// </summary>
         private void OutputMiles()
         {
-            Console.WriteLine(miles + " miles is " + " feet!");
+            Console.WriteLine(miles + " miles ");
         }
 
         /// <summary>
-        /// 
+        /// This method is displaying output in miles
         /// </summary>
         private void OutputMeters()
         {
-            Console.WriteLine(miles + " miles is " + meters + " meters!");
+            Console.WriteLine( meters + " meters!");
         }
         /// <summary>
-        ///
+        ///This method is displaying output in meters
         /// 
         /// </summary>
 

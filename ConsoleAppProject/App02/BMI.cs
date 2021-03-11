@@ -61,6 +61,24 @@ namespace ConsoleAppProject.App02
         public void InputMetricDetails()
         {
 
+            Console.Write("Enter your height to the nearest meters\n\n\n");
+            Console.Write("Enter your height in meters > ");
+            string meter_value = Console.ReadLine();
+            int height = Convert.ToInt16(meter_value);
+
+           
+
+            
+
+            Console.Write("Enter your weight to the nearest Kilograms\n\n\n");
+            Console.Write("Enter your weight in Kilograms > ");
+            string kilograms_value = Console.ReadLine();
+            double weight  = Convert.ToDouble(kilograms_value);
+
+
+            
+
+            CalculateIndex(height, weight, 1);
         }
 
         public void InputImperialDetails()
@@ -87,7 +105,7 @@ namespace ConsoleAppProject.App02
 
 
             //converting weight from stones to pounds
-            double weight_stones_pounds = weight_stones * 0.0714286;
+            double weight_stones_pounds = weight_stones * 14;
 
             Console.Write("Enter your weight in pounds > ");
             string pounds_value = Console.ReadLine();
@@ -95,23 +113,62 @@ namespace ConsoleAppProject.App02
 
             double weight = weight_stones_pounds + weight_pounds;
 
-            CalculateIndex(height,weight);
+            CalculateIndex(height,weight,2);
         }
 
-        public void CalculateIndex(double height,double weight)
+        public void CalculateIndex(double height,double weight,int units)
         {
-            double bmi = (weight * 703) / (height * height);
-            Console.Write("Your BMI is" + bmi);
+            if(units == 1 )
+            {
+                double bmi = (weight) / (height * height);
+
+                OutputHealthMessage(bmi);
+            }
+            if (units == 2)
+            {
+                double bmi = (weight * 703) / (height * height);
+
+                OutputHealthMessage(bmi);
+
+            }
         }
 
-        public void OutputHealthMessage()
+        public void OutputHealthMessage(double bmi)
         {
 
+            Console.Write("Your BMI is " + bmi);
+            OutputBameMessage(bmi);
         }
 
-        public void OutputBameMessage()
+        public void OutputBameMessage(double bmi)
         {
+            if (bmi < 18.50)
+            {
+                Console.WriteLine("You are in Underweight range");
+            }
+            if (bmi > 18.5 && bmi < 24.9)
+            {
+                Console.WriteLine("You are in Normal range");
+            }
+            if (bmi > 25.0 && bmi < 29.9)
+            {
+                Console.WriteLine("You are in Overweight range");
+            }
+            if (bmi > 30.0 && bmi < 34.9)
+            {
+                Console.WriteLine("You are in Obese Class I range");
+            }
+            if (bmi > 35.0 && bmi < 39.9)
+            {
+                Console.WriteLine("You are in Obese Class II range");
+            }
+            if (bmi >= 40.0)
+            {
+                Console.WriteLine("You are in Obese Class III range");
+            }
 
+            Console.WriteLine("\n\n If you are black, Asian or other minority \n Ethnic groups, you have a higher risk");
+            Console.WriteLine("\n\n Adult 23.0 or more are at increased risk \n Adults 27.5 or more are at high risk");
         }
 
         private void OutputHeading(string title)
