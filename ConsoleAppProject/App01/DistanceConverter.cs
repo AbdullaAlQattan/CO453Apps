@@ -1,4 +1,5 @@
 ﻿using System;
+using ConsoleAppProject.Helpers;
 
 namespace ConsoleAppProject.App01
 {
@@ -23,6 +24,18 @@ namespace ConsoleAppProject.App01
         private double miles;
         private double feet;
         private double meters;
+
+        public void Run()
+        {
+            string[] choices = new string[]
+            {
+                "miles to feet",
+                "feet to miles",
+                "miles to meters",
+            };
+            int choice = ConsoleHelper.SelectChoice(choices);
+
+        }
 
         /// <summary>
         ///  This meathod will input the distance measured in miles

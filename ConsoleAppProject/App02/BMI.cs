@@ -1,4 +1,5 @@
 ﻿using System;
+using ConsoleAppProject.Helpers;
 
 namespace ConsoleAppProject.App02
 {
@@ -25,17 +26,36 @@ namespace ConsoleAppProject.App02
         public void Run()
         {
             OutputHeading("BMI Calculator");
-            SelectUnits();
+            /*SelectUnits();
             InputMetricDetails();
+            InputImperialDetails();
             CalculateIndex();
             OutputHealthMessage();
-            OutputBameMessage();
+            OutputBameMessage();*/
+
+
+            string[] choices = new string[]
+            {
+                "Metric Units",
+                "Imperial Units",
+            };
+
+            int choice = ConsoleHelper.SelectChoice(choices);
+            SelectUnits(choice);
 
         }
 
-        public void SelectUnits()
+        public void SelectUnits(int choice)
         {
-          
+            if(choice==1)
+            {
+                InputMetricDetails();
+            }
+            if(choice==2)
+            {
+                InputImperialDetails();
+
+            }
         }
 
         public void InputMetricDetails()
@@ -45,12 +65,43 @@ namespace ConsoleAppProject.App02
 
         public void InputImperialDetails()
         {
+            Console.Write("Enter your height to the nearest feet and inches\n\n\n");
+            Console.Write("Enter your height in feet > ");
+            string feet_value = Console.ReadLine();
+            int height_feet = Convert.ToInt16(feet_value);
 
+            //converting height from feet to inches
+            double height_feet_inches = height_feet * 12.000;
+
+            Console.Write("Enter your height in inches > ");
+            string inches_value = Console.ReadLine();
+            double height_inches = Convert.ToDouble(inches_value);
+
+            double height = height_feet_inches + height_inches;
+
+
+            Console.Write("Enter your weight to the nearest stones and pounds\n\n\n");
+            Console.Write("Enter your weight in stones > ");
+            string stones_value = Console.ReadLine();
+            double weight_stones = Convert.ToDouble(stones_value);
+
+
+            //converting weight from stones to pounds
+            double weight_stones_pounds = weight_stones * 0.0714286;
+
+            Console.Write("Enter your weight in pounds > ");
+            string pounds_value = Console.ReadLine();
+            double weight_pounds = Convert.ToDouble(pounds_value);
+
+            double weight = weight_stones_pounds + weight_pounds;
+
+            CalculateIndex(height,weight);
         }
 
-        public void CalculateIndex()
+        public void CalculateIndex(double height,double weight)
         {
-
+            double bmi = (weight * 703) / (height * height);
+            Console.Write("Your BMI is" + bmi);
         }
 
         public void OutputHealthMessage()
