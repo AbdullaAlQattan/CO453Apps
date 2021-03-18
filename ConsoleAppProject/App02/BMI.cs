@@ -4,7 +4,8 @@ using ConsoleAppProject.Helpers;
 namespace ConsoleAppProject.App02
 {
     /// <summary>
-    /// Please describe the main features of this App
+    /// This app will calclualate the body mass index of a person. It takes
+    /// inputs in Metric units as well as Imperial units.
     /// </summary>
     /// <author>
     /// Abdulla AlQattan version 0.1
@@ -45,6 +46,10 @@ namespace ConsoleAppProject.App02
 
         }
 
+        /// <summary>
+        ///  This method will display the choice of Units such as Metric Units or Imperial Units for selection.
+        /// </summary>
+
         public void SelectUnits(int choice)
         {
             if(choice==1)
@@ -58,7 +63,12 @@ namespace ConsoleAppProject.App02
             }
         }
 
+        /// <summary>
+        ///  This method will call the InputDetails basing on the choice of Units
+        /// </summary>
+
         public void InputMetricDetails()
+
         {
 
             Console.Write("Enter your height to the nearest meters\n\n\n");
@@ -79,6 +89,10 @@ namespace ConsoleAppProject.App02
             
 
             CalculateIndex(height, weight, 1);
+
+            /// <summary>
+            ///  This method will read the InputDetails in Metric form and calls method to calculate bmi
+            /// </summary>
         }
 
         public void InputImperialDetails()
@@ -98,7 +112,7 @@ namespace ConsoleAppProject.App02
             double height = height_feet_inches + height_inches;
 
 
-            Console.Write("Enter your weight to the nearest stones and pounds\n\n\n");
+            Console.Write("\nEnter your weight to the nearest stones and pounds\n\n");
             Console.Write("Enter your weight in stones > ");
             string stones_value = Console.ReadLine();
             double weight_stones = Convert.ToDouble(stones_value);
@@ -116,6 +130,10 @@ namespace ConsoleAppProject.App02
             CalculateIndex(height,weight,2);
         }
 
+        /// <summary>
+        ///  This method will read the InputDetails in Imperial form and calls method to calculate bmi
+        /// </summary>
+        /// 
         public void CalculateIndex(double height,double weight,int units)
         {
             if(units == 1 )
@@ -133,6 +151,10 @@ namespace ConsoleAppProject.App02
             }
         }
 
+        /// <summary>
+        ///  This method will calculate bmi
+        /// </summary>
+        /// 
         public void OutputHealthMessage(double bmi)
         {
 
@@ -140,6 +162,11 @@ namespace ConsoleAppProject.App02
             OutputBameMessage(bmi);
         }
 
+
+        /// <summary>
+        ///  This method will display the bmi
+        /// </summary>
+        /// 
         public void OutputBameMessage(double bmi)
         {
             if (bmi < 18.50)
@@ -171,6 +198,10 @@ namespace ConsoleAppProject.App02
             Console.WriteLine("\n\n Adult 23.0 or more are at increased risk \n Adults 27.5 or more are at high risk");
         }
 
+        /// <summary>
+        ///  This method will dislay the BMI Message basing on the BMI range
+        /// </summary>
+
         private void OutputHeading(string title)
         {
             Console.WriteLine("\n-------------------------------------");
@@ -180,6 +211,11 @@ namespace ConsoleAppProject.App02
 
             Console.WriteLine();
             Console.WriteLine();
+
+            /// <summary>
+            ///  This method outputs the heading showing the title and name of the
+            ///  author.
+            /// </summary>
         }
     }
 }
