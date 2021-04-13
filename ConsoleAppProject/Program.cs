@@ -1,5 +1,6 @@
 ﻿using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
+using ConsoleAppProject.App03;
 using System;
 
 namespace ConsoleAppProject
@@ -25,8 +26,12 @@ namespace ConsoleAppProject
             //DistanceConverter converter = new DistanceConverter();
             //converter.Run();
 
-            BMI calculator = new BMI();
-            calculator.Run();
+            //BMI calculator = new BMI();
+            //calculator.Run();
+
+            StudentGrades studentGrades = new StudentGrades();
+            studentGrades.Run();
+
 
         }
     }
