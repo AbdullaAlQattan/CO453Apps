@@ -7,7 +7,8 @@ using ConsoleAppProject.Helpers;
 namespace ConsoleAppProject.App03
 {
     /// <summary>
-    /// 
+    /// The Program is reading the marks of students and calculating their Grades and Mean , Minimum Mark,
+    /// Maximum Mark of the class of students.
     /// </summary>
     public class StudentGrades
     {
@@ -24,7 +25,8 @@ namespace ConsoleAppProject.App03
         public int Maximum { get; set; }
 
         /// <summary>
-        /// 
+        /// This Method is Initializing the names of students and other attributes such as GradeProfile,Marks,Minimum marks
+        /// Maximum Marks and the mean Mark of the class
         /// </summary>
         public StudentGrades()
         {
@@ -52,6 +54,9 @@ namespace ConsoleAppProject.App03
             MarksRanges();
         }
 
+        /// <summary>
+        /// This Method is accepting the mark of the respective student and categorizing tha Mark as GradeProfile
+        /// </summary>
         public Grades ConvertToGrade(int mark)
         {
             if (mark <40)
@@ -86,7 +91,9 @@ namespace ConsoleAppProject.App03
             return Grades.X;
             
         }
-
+        /// <summary>
+        /// This Method is Calculating the Mean , Maximum Mark, Minimum Mark of the class
+        /// </summary>
         public void MarksRanges()
         {
             int index = 0;
@@ -123,10 +130,12 @@ namespace ConsoleAppProject.App03
             Console.WriteLine("\nMaximum Mark is");
             Console.WriteLine(Maximum);
         }
-            
-            
 
-            public void InputMarks()
+        /// <summary>
+        /// This Method is reading the Marks of the 10 students within the range of mark as 0 to 100
+        /// </summary> 
+
+        public void InputMarks()
         {
             ConsoleHelper.OutputTitle("Inputting Student Marks");
             int index = 0;
@@ -139,6 +148,11 @@ namespace ConsoleAppProject.App03
             }
 
         }
+
+        /// <summary>
+        /// This Method is Displaying the Student Names with their Respective Grades achieved according
+        /// to their Marks
+        /// </summary>
         public void OutputMarks()
         {
             ConsoleHelper.OutputTitle("Outputting Student Marks");
