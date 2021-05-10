@@ -35,6 +35,24 @@ namespace ConsoleAppProject.App01
             };
             int choice = ConsoleHelper.SelectChoice(choices);
 
+            switch(choice)
+            {
+                case 1:
+
+                    MilesToFeet();
+                    break;
+
+                case 2:
+
+                    FeetToMiles();
+                    break;
+
+                case 3:
+
+                    MilesToMeters();
+                    break;
+            }
+
         }
 
         /// <summary>

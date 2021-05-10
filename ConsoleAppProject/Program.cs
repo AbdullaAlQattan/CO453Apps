@@ -23,14 +23,14 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.Beep();
 
-            //DistanceConverter converter = new DistanceConverter();
-            //converter.Run();
+          DistanceConverter converter = new DistanceConverter();
+          converter.Run();
 
             //BMI calculator = new BMI();
             //calculator.Run();
 
-            StudentGrades studentGrades = new StudentGrades();
-            studentGrades.Run();
+            //StudentGrades studentGrades = new StudentGrades();
+            //studentGrades.Run();
 
 
         }

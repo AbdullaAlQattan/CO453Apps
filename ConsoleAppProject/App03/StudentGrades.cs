@@ -9,6 +9,7 @@ namespace ConsoleAppProject.App03
     /// <summary>
     /// The Program is reading the marks of students and calculating their Grades and Mean , Minimum Mark,
     /// Maximum Mark of the class of students.
+    /// Abdulla AlQattan
     /// </summary>
     public class StudentGrades
     {
