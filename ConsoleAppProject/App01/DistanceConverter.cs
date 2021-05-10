@@ -1,5 +1,6 @@
 ﻿using System;
 using ConsoleAppProject.Helpers;
+using ConsoleAppProject.App01;
 
 namespace ConsoleAppProject.App01
 {
@@ -51,6 +52,11 @@ namespace ConsoleAppProject.App01
 
                     MilesToMeters();
                     break;
+
+                default:
+                    Console.Write("Invalid Choice Selected ");
+                    break;
+
             }
 
         }

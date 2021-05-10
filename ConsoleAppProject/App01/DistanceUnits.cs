@@ -5,10 +5,8 @@
     /// </summary>
     public enum DistanceUnits
     {
-        NoUnit,
         Feet,
         Metres,
-        Kilometres,
         Miles
     }
 }
