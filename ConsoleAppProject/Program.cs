@@ -1,6 +1,7 @@
 ﻿using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
 using System;
 
 namespace ConsoleAppProject
@@ -15,6 +16,8 @@ namespace ConsoleAppProject
     /// </summary>
     public static class Program
     {
+        public static MessagePost.Run MessagePost { get; private set; }
+
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Black;
@@ -23,15 +26,14 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.Beep();
 
-          DistanceConverter converter = new DistanceConverter();
-          converter.Run();
+          //DistanceConverter converter = new DistanceConverter();
+          //converter.Run();
 
             //BMI calculator = new BMI();
             //calculator.Run();
 
             //StudentGrades studentGrades = new StudentGrades();
             //studentGrades.Run();
-
 
         }
     }
