@@ -8,7 +8,7 @@ namespace ConsoleAppProject.App03
 {
     /// <summary>
     /// The Program is reading the marks of students and calculating their Grades and Mean , Minimum Mark,
-    /// Maximum Mark of the class of students.
+    /// Maximum Mark of the class of students along with Percentage of students in each Grade Profile .
     /// Abdulla AlQattan
     /// </summary>
     public class StudentGrades
@@ -53,6 +53,7 @@ namespace ConsoleAppProject.App03
             InputMarks();
             OutputMarks();
             MarksRanges();
+            GradeProfileofClass();
         }
 
         /// <summary>
@@ -84,12 +85,10 @@ namespace ConsoleAppProject.App03
             }
 
             else
-                if (mark <= 100)
-            {
+                         
                 return Grades.A;
-            }
-             
-            return Grades.X;
+           
+         
             
         }
         /// <summary>
@@ -165,7 +164,69 @@ namespace ConsoleAppProject.App03
                 index++;
             }
         }
+            /// <summary>
+            /// This Method is Calculating the GradeProfile of Students indicating the Percentage of students in each grade in a class 
+            /// 
+            /// </summary>
+        public void GradeProfileofClass()
+        {
+            ConsoleHelper.OutputTitle("GradeProfile of Student Marks");
+            int index = 0;
+            int gradeAcount = 0;
+            int gradeBcount = 0;
+            int gradeCcount = 0;
+            int gradeDcount = 0;
+            int gradeFcount = 0;
+       
 
+
+            foreach (string student in Students)
+            {
+                Grades grade = ConvertToGrade(Marks[index]);
+              
+
+                switch(grade)
+                {
+                    case Grades.A : gradeAcount = gradeAcount + 1;
+                       
+                                    break;
+
+
+                    case Grades.B:
+                        gradeBcount = gradeBcount + 1;
+                        break;
+
+
+                    case Grades.C:
+                        gradeCcount = gradeCcount + 1;
+                        break;
+
+
+                    case Grades.D:
+
+                        gradeDcount = gradeDcount + 1;
+                        break;
+
+                    case Grades.F:
+                        gradeFcount = gradeFcount + 1;
+                        break;
+
+
+               
+                }
+                index++;
+            }
+
+            
+            Console.WriteLine(gradeAcount * 10 + " Percentage of First Class  students");
+            Console.WriteLine(gradeBcount * 10 + " Percentage of Upper Second students");
+            Console.WriteLine(gradeCcount * 10 + " Percentage of Lower Second students");
+            Console.WriteLine(gradeDcount * 10 + " Percentage of Third Class students");
+            Console.WriteLine(gradeFcount * 10 + " Percentage of Fail students");
+            
+
+
+        }
 
     }
 }

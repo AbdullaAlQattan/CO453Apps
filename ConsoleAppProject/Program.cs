@@ -16,7 +16,6 @@ namespace ConsoleAppProject
     /// </summary>
     public static class Program
     {
-        public static MessagePost.Run MessagePost { get; private set; }
 
         public static void Main(string[] args)
         {
@@ -32,8 +31,8 @@ namespace ConsoleAppProject
             //BMI calculator = new BMI();
             //calculator.Run();
 
-            //StudentGrades studentGrades = new StudentGrades();
-            //studentGrades.Run();
+            StudentGrades studentGrades = new StudentGrades();
+            studentGrades.Run();
 
 
 
