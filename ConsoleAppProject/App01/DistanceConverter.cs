@@ -189,13 +189,9 @@ namespace ConsoleAppProject.App01
         /// This Method is reading the input in Miles
         /// </summary>
 
-
-
         private double InputMiles()
         {
-            Console.Write("Please enter the number of miles > ");
-            string value = Console.ReadLine();
-            miles = Convert.ToDouble(value);
+            miles = ConsoleHelper.InputNumber("Please enter the number of miles > ");
             return miles;
         }
         /// <summary>
@@ -203,21 +199,15 @@ namespace ConsoleAppProject.App01
         /// </summary>
         private void InputMeters()
         {
-            Console.Write("Please enter the number of Meters > ");
-            string value = Console.ReadLine();
-            meters = Convert.ToDouble(value);
+            meters = ConsoleHelper.InputNumber("Please enter the number of meters > ");
         }
         /// <summary>
         /// This Method is reading the Input in Feet
         /// </summary>
         private void InputFeet()
         {
-            Console.Write("Please enter the number of feet > ");
-            string value = Console.ReadLine();
-            feet = Convert.ToDouble(value);
+            feet = ConsoleHelper.InputNumber("Please enter the number of feet > ");
         }
-
-
 
         /// <summary>
         /// This method is converting from Miles to Feet

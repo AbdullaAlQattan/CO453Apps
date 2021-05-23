@@ -70,15 +70,7 @@ namespace ConsoleAppProject.App02
         public void InputMetricDetails()
 
         {
-
-            Console.Write("Enter your height to the nearest meters\n\n\n");
-            Console.Write("Enter your height in meters > ");
-            string meter_value = Console.ReadLine();
-            int height = Convert.ToInt16(meter_value);
-
-           
-
-            
+            double height = ConsoleHelper.InputNumber("Enter your height in meters > ");
 
             Console.Write("Enter your weight to the nearest Kilograms\n\n\n");
             Console.Write("Enter your weight in Kilograms > ");
@@ -86,15 +78,13 @@ namespace ConsoleAppProject.App02
             double weight  = Convert.ToDouble(kilograms_value);
 
 
-            
-
             CalculateIndex(height, weight, 1);
 
             /// <summary>
             ///  This method will read the InputDetails in Metric form and calls method to calculate bmi
             /// </summary>
         }
-
+         
         public void InputImperialDetails()
         {
             Console.Write("Enter your height to the nearest feet and inches\n\n\n");
