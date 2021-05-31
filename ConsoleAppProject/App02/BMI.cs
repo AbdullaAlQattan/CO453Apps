@@ -27,13 +27,6 @@ namespace ConsoleAppProject.App02
         public void Run()
         {
             OutputHeading("BMI Calculator");
-            /*SelectUnits();
-            InputMetricDetails();
-            InputImperialDetails();
-            CalculateIndex();
-            OutputHealthMessage();
-            OutputBameMessage();*/
-
 
             string[] choices = new string[]
             {
@@ -49,7 +42,6 @@ namespace ConsoleAppProject.App02
         /// <summary>
         ///  This method will display the choice of Units such as Metric Units or Imperial Units for selection.
         /// </summary>
-
         public void SelectUnits(int choice)
         {
             if(choice==1)
@@ -66,7 +58,6 @@ namespace ConsoleAppProject.App02
         /// <summary>
         ///  This method will call the InputDetails basing on the choice of Units
         /// </summary>
-
         public void InputMetricDetails()
 
         {
@@ -79,12 +70,11 @@ namespace ConsoleAppProject.App02
 
 
             CalculateIndex(height, weight, 1);
-
-            /// <summary>
-            ///  This method will read the InputDetails in Metric form and calls method to calculate bmi
-            /// </summary>
         }
-         
+
+        /// <summary>
+        ///  This method will read the InputDetails in Metric form and calls method to calculate bmi
+        /// </summary>
         public void InputImperialDetails()
         {
             Console.Write("Enter your height to the nearest feet and inches\n\n\n");
@@ -152,7 +142,6 @@ namespace ConsoleAppProject.App02
             OutputBameMessage(bmi);
         }
 
-
         /// <summary>
         ///  This method will display the bmi
         /// </summary>
@@ -191,7 +180,6 @@ namespace ConsoleAppProject.App02
         /// <summary>
         ///  This method will dislay the BMI Message basing on the BMI range
         /// </summary>
-
         private void OutputHeading(string title)
         {
             Console.WriteLine("\n-------------------------------------");
