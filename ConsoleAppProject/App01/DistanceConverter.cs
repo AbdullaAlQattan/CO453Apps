@@ -45,8 +45,6 @@ namespace ConsoleAppProject.App01
         ///  calculate it the same distance in feet, and output the distance
         ///  in feet.
         /// </summary>
-
-
         public void Run()
         {
             string[] choices = new string[]
@@ -102,10 +100,10 @@ namespace ConsoleAppProject.App01
             }
 
         }
-        /// <summary>
-        /// This Method is used to Read input in miles, calculate from miles to feet and then displays in output in feet
-        /// </summary>
-        public void MilesToFeet()
+       /// <summary>
+       /// This Method is used to Read input in miles, calculate from miles to feet and then displays in output in feet
+       /// </summary>
+       public void MilesToFeet()
         {
             OutputHeading("Converting Miles to Feet");
 
@@ -113,6 +111,7 @@ namespace ConsoleAppProject.App01
             CalculateMilesToFeet();
             OutputFeet();
         }
+
         /// <summary>
         /// This Method is used to Read input in Feet, calculate from Feet to Miles and then displays output in Miles
         /// </summary>
@@ -124,6 +123,7 @@ namespace ConsoleAppProject.App01
             CalculateFeetToMiles();
             OutputMiles();
         }
+
         /// <summary>
         /// This Method is used to Read input in Miles, calculate from Miles to Meters and then displays in output in Kilometers
         /// </summary>
@@ -167,12 +167,10 @@ namespace ConsoleAppProject.App01
             OutputFeet();
         }
 
-
         /// <summary>
         ///  This method outputs the heading showing the title and name of the
         ///  author.
         /// </summary>
-
         private void OutputHeading(String title)
         {
             Console.WriteLine("\n-------------------------------------");
@@ -184,16 +182,15 @@ namespace ConsoleAppProject.App01
             Console.WriteLine();
         }
 
-
         /// <summary>
         /// This Method is reading the input in Miles
         /// </summary>
-
         private double InputMiles()
         {
             miles = ConsoleHelper.InputNumber("Please enter the number of miles > ");
             return miles;
         }
+
         /// <summary>
         /// This Method is reading the Input in Meters
         /// </summary>
@@ -201,6 +198,7 @@ namespace ConsoleAppProject.App01
         {
             meters = ConsoleHelper.InputNumber("Please enter the number of meters > ");
         }
+
         /// <summary>
         /// This Method is reading the Input in Feet
         /// </summary>
@@ -212,7 +210,6 @@ namespace ConsoleAppProject.App01
         /// <summary>
         /// This method is converting from Miles to Feet
         /// </summary>
-
         private void CalculateMilesToFeet()
         {
             feet = miles * MILES_IN_FEET;
@@ -234,10 +231,6 @@ namespace ConsoleAppProject.App01
             meters = miles * MILES_IN_METERS;
         }
 
-
-
-
-
         /// <summary>
         /// This method is converting from meters to miles
         /// </summary>
@@ -247,8 +240,6 @@ namespace ConsoleAppProject.App01
             miles = meters * METERS_IN_MILES;
         }
 
-
-
         /// <summary>
         /// This method is converting from feet to Meters
         /// </summary>
@@ -257,8 +248,6 @@ namespace ConsoleAppProject.App01
         {
             meters = feet * FEET_IN_METERS;
         }
-
-
 
         /// <summary>
         /// This method is converting from meters to feet
@@ -272,39 +261,28 @@ namespace ConsoleAppProject.App01
         /// <summary>
         /// This method is displaying output in feet
         /// </summary>
-
-
         private void OutputFeet()
         {
             Console.WriteLine(feet + " feet! ");
         }
 
-
-
         /// <summary>
         /// This method is displaying output in miles
         /// </summary>
-
-
-
-
-
-
         private void OutputMiles()
         {
             Console.WriteLine(miles.ToString("F1") + " miles ");
         }
 
-
         /// <summary>
         ///This method is displaying output in Meters
         /// 
         /// </summary>
-
         private void OutputMeters()
         {
             Console.WriteLine(meters.ToString("F1") + " meters!");
         }
+
         /// <summary>
         ///This method is displaying output in meters
         /// 
