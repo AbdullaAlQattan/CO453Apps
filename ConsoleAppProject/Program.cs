@@ -2,6 +2,7 @@
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
 using ConsoleAppProject.App04;
+
 using System;
 
 namespace ConsoleAppProject
@@ -16,6 +17,18 @@ namespace ConsoleAppProject
     /// </summary>
     public static class Program
     {
+        private static DistanceConverter converter = new DistanceConverter();
+
+        private static BMI calculator = new BMI();
+
+        private static StudentGrades grades = new StudentGrades();
+
+        private static NewsFeed newsFeed = new NewsFeed();
+
+        public static BMI BMI
+        {
+            get => default;
+        }
 
         public static void Main(string[] args)
         {
@@ -25,8 +38,31 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.Beep();
 
-          //DistanceConverter converter = new DistanceConverter();
-          //converter.Run();
+            string[] choice = { "Distance Converter", "BMI Calculator",
+                                "Student Marks", "Social Network"};
+            /// new
+            ///
+
+            //int choiceNo = ConsoleHelper.SelectChoices(choices);
+
+            //if (choiceNo ==1)
+            //{
+                //converter.ConvertDistance();
+            //}
+            //else if (choiceNo == 2)
+            //{
+                //calculator.CalculateIndex();
+            //}
+            //else if (choiceNo == 3)
+            //{
+                //calculator.CalculateIndex();
+            //}
+
+            ///old
+            ///
+
+            //DistanceConverter converter = new DistanceConverter();
+            //converter.Run();
 
             //BMI calculator = new BMI();
             //calculator.Run();
