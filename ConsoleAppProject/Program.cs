@@ -28,14 +28,14 @@ namespace ConsoleAppProject
           //DistanceConverter converter = new DistanceConverter();
           //converter.Run();
 
-            BMI calculator = new BMI();
-            calculator.Run();
+            //BMI calculator = new BMI();
+            //calculator.Run();
 
             //StudentGrades studentGrades = new StudentGrades();
             //studentGrades.Run();
 
-
-
+            MessagePost message = new MessagePost("Abdulla","hi");
+            message.Run();
         }
     }
 }
