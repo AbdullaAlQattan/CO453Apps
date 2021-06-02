@@ -39,36 +39,31 @@ namespace ConsoleAppProject
             Console.Beep();
 
             string[] choice = { "Distance Converter", "BMI Calculator",
-                                "Student Marks", "Social Network"};
+                                "Student Marks","Social Network"};
 
 
-            int choiceNo = ConsoleHelper.//SelectChoices(choices);
+            int choiceNo = ConsoleHelper.SelectChoices(choice);
 
             if (choiceNo == 1)
             {
-                //converter.ConvertDistance();
+                DistanceConverter converter = new DistanceConverter();
+                converter.Run();
             }
             else if (choiceNo == 2)
             {
-                //calculator.CalculateIndex();
+                BMI calculator = new BMI();
+                calculator.Run();
             }
             else if (choiceNo == 3)
             {
-                app04.DisplayMenu();
+                StudentGrades studentGrades = new StudentGrades();
+                studentGrades.Run();
             }
-
-
-            DistanceConverter converter = new DistanceConverter();
-            converter.Run();
-
-            BMI calculator = new BMI();
-            calculator.Run();
-
-            StudentGrades studentGrades = new StudentGrades();
-            studentGrades.Run();
-
-            //MessagePost message = new MessagePost("Abdulla", "hi");
-            //message.Run();
+            else if (choiceNo == 4)
+            {
+                MessagePost message = new MessagePost("Abdulla","hi");
+                message.Run();
+            }
         }
     }
 }

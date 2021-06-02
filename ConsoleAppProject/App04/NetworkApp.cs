@@ -39,17 +39,22 @@ namespace ConsoleAppProject.App04
                     case 5: DisplayByAuthor(); break;
                     case 6: DisplayByDate(); break;
                     case 7: AddComment(); break;
-                    case 8: LikePosts(); break;
+                    //case 8: LikePosts(); break;
                     case 9: wantToQuit = true; break;
                 }
 
             } while (!wantToQuit);
         }
 
-        private void LikePosts()
+        private void PostMessage()
         {
             throw new NotImplementedException();
         }
+
+        //private void LikePosts()
+        //{
+            //throw new NotImplementedException();
+        //}
 
         private void AddComment()
         {
@@ -72,7 +77,7 @@ namespace ConsoleAppProject.App04
 
             int id = (int)ConsoleHelper.InputNumber(" Please enter the post id > ",
                                                     1, Post.GetNumberOfPosts());
-            news.RemovePost(id);
+            news.RemovePost1(id);
         }
 
         private void DisplayAll()

@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using ConsoleAppProject.Helpers;
 
@@ -108,10 +108,9 @@ namespace ConsoleAppProject.App04
             }
         }
 
-        internal void RemovePost(int id)
+        internal void RemovePost1(int id)
         {
             throw new NotImplementedException();
         }
     }
-
 }

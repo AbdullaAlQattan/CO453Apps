@@ -31,6 +31,11 @@ namespace ConsoleAppProject.App04
             Message = text;
         }
 
+        public void Run()
+        {
+            Display();
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -40,5 +45,6 @@ namespace ConsoleAppProject.App04
 
             base.Display();
         }
+
     }
 }
