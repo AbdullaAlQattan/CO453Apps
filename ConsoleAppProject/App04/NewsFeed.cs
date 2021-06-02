@@ -15,11 +15,13 @@ namespace ConsoleAppProject.App04
     /// search or ordering functions.
     ///</summary>
     ///<author>
-    ///  Michael Kölling and David J. Barnes
+    /// Abdulla AlQattan
     ///  version 0.1
     ///</author> 
     public class NewsFeed
     {
+        public const string AUTHOR = "Abdulla";
+
         private readonly List<Post> posts;
 
         ///<summary>
@@ -28,6 +30,11 @@ namespace ConsoleAppProject.App04
         public NewsFeed()
         {
             posts = new List<Post>();
+            MessagePost post = new MessagePost(AUTHOR, "I am a Liverpool fan");
+            AddMessagePost(post);
+
+            PhotoPost photoPost = new PhotoPost(AUTHOR, "Photo1.jpg", "Liverpool");
+            AddPhotoPost(photoPost);
         }
 
 
@@ -61,8 +68,13 @@ namespace ConsoleAppProject.App04
             foreach (Post posts  in posts)
             {
                 posts.Display();
-                Console.WriteLine();   // empty line between posts
+                Console.WriteLine();
             }
+        }
+
+        internal void RemovePost(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 

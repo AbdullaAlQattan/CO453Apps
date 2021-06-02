@@ -2,7 +2,7 @@
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
 using ConsoleAppProject.App04;
-
+using ConsoleAppProject.Helpers;
 using System;
 
 namespace ConsoleAppProject
@@ -23,10 +23,10 @@ namespace ConsoleAppProject
 
         private static StudentGrades grades = new StudentGrades();
 
-        private static NewsFeed newsFeed = new NewsFeed();
-
+        private static NetworkApp app04 = new NetworkApp();
+        
         public static BMI BMI
-        {
+        { 
             get => default;
         }
 
@@ -40,38 +40,35 @@ namespace ConsoleAppProject
 
             string[] choice = { "Distance Converter", "BMI Calculator",
                                 "Student Marks", "Social Network"};
-            /// new
-            ///
 
-            //int choiceNo = ConsoleHelper.SelectChoices(choices);
 
-            //if (choiceNo ==1)
-            //{
+            int choiceNo = ConsoleHelper.//SelectChoices(choices);
+
+            if (choiceNo == 1)
+            {
                 //converter.ConvertDistance();
-            //}
-            //else if (choiceNo == 2)
-            //{
+            }
+            else if (choiceNo == 2)
+            {
                 //calculator.CalculateIndex();
-            //}
-            //else if (choiceNo == 3)
-            //{
-                //calculator.CalculateIndex();
-            //}
+            }
+            else if (choiceNo == 3)
+            {
+                app04.DisplayMenu();
+            }
 
-            ///old
-            ///
 
-            //DistanceConverter converter = new DistanceConverter();
-            //converter.Run();
+            DistanceConverter converter = new DistanceConverter();
+            converter.Run();
 
-            //BMI calculator = new BMI();
-            //calculator.Run();
+            BMI calculator = new BMI();
+            calculator.Run();
 
-            //StudentGrades studentGrades = new StudentGrades();
-            //studentGrades.Run();
+            StudentGrades studentGrades = new StudentGrades();
+            studentGrades.Run();
 
-            MessagePost message = new MessagePost("Abdulla","hi");
-            message.Run();
+            //MessagePost message = new MessagePost("Abdulla", "hi");
+            //message.Run();
         }
     }
 }

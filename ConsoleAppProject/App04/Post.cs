@@ -1,24 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace ConsoleAppProject.App04
 {
     public class Post
     {
+        public int PostId { get; }
+
+        // username of the post s author
+        public string Username { get; }
+
+        public DateTime Timestamp { get; }
+
+        private static int instances = 0;
+
         private int likes;
 
         private readonly List<String> comments;
-
-        // username of the post's author
-        public String Username { get; }
-
-        public DateTime Timestamp { get; }
 
         /// <summary>
         /// 
         /// </summary>
         public Post(string author)
         {
+            instances++;
+            PostId = instances;
+
             this.Username = author;
             Timestamp = DateTime.Now;
 
@@ -62,7 +70,7 @@ namespace ConsoleAppProject.App04
         /// (Currently: Print to the text terminal. This is simulating display 
         /// in a web browser for now.)
         ///</summary>
-        public void Display()
+        public virtual void Display()
         {
             Console.WriteLine();
             Console.WriteLine($"    Author: {Username}");
@@ -86,6 +94,11 @@ namespace ConsoleAppProject.App04
             {
                 Console.WriteLine($"    {comments.Count}  comment(s). Click here to view.");
             }
+        }
+
+        internal static double GetNumberOfPosts()
+        {
+            throw new NotImplementedException();
         }
 
         ///<summary>

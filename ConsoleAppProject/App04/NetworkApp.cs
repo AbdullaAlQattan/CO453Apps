@@ -7,6 +7,13 @@ namespace ConsoleAppProject.App04
 {
     public class NetworkApp
     {
+        private NewsFeed news = new NewsFeed();
+
+        public bool LikePosts { get; private set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public void DisplayMenu()
         {
             ConsoleHelper.OutputHeading("    Abdulla's News Feed");
@@ -18,6 +25,7 @@ namespace ConsoleAppProject.App04
             };
 
             bool wantToQuit = false;
+
             do
             {
                 int choice = ConsoleHelper.SelectChoice(choices);
@@ -26,26 +34,84 @@ namespace ConsoleAppProject.App04
                 {
                     case 1: PostMessage(); break;
                     case 2: PostImage(); break;
-                    case 3: DisplayAll(); break;
-                    case 4: wantToQuit(); break;
+                    case 3: RemovePost(); break;
+                    case 4: DisplayAll(); break;
+                    case 5: DisplayByAuthor(); break;
+                    case 6: DisplayByDate(); break;
+                    case 7: AddComment(); break;
+                    case 8: LikePosts(); break;
+                    case 9: wantToQuit = true; break;
                 }
 
             } while (!wantToQuit);
         }
 
+        private void LikePosts()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AddComment()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void DisplayByDate()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void DisplayByAuthor()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void RemovePost()
+        {
+            ConsoleHelper.OutputTitle($"Removing a Post");
+
+            int id = (int)ConsoleHelper.InputNumber(" Please enter the post id > ",
+                                                    1, Post.GetNumberOfPosts());
+            news.RemovePost(id);
+        }
+
         private void DisplayAll()
         {
-            throw new NotImplementedException();
+            news.Display(); 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void PostImage()
         {
-            throw new NotImplementedException();
+            ConsoleHelper.OutputTitle("Posting an Image/Photo");
+
+            string author = InputName();
+
+            Console.Write(" Please enter your image filename > ");
+            string filename = Console.ReadLine();
+
+            Console.Write(" Please enter yout image caption > ");
+            string caption = Console.ReadLine();
+
+            PhotoPost post = new PhotoPost(author, filename, caption);
+            news.AddPhotoPost(post);
+
+            ConsoleHelper.OutputTitle("You have just posted this image:");
+            post.Display();
         }
 
-        private void PostMessage()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private string InputName()
         {
-            throw new NotImplementedException();
+            Console.Write(" Please enter your name > ");
+            string author = Console.ReadLine();
+
+            return author;
         }
     }
 }

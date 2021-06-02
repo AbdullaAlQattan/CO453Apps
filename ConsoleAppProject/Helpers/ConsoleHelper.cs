@@ -50,6 +50,11 @@ namespace ConsoleAppProject.Helpers
             }
         }
 
+        internal static int SelectChoices(object choices)
+        {
+            throw new NotImplementedException();
+        }
+
 
         /// <summary>
         /// This method will display a prompt to the user and
