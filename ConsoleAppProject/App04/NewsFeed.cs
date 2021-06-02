@@ -1,6 +1,6 @@
 ﻿ using System;
 using System.Collections.Generic;
-
+using ConsoleAppProject.Helpers;
 
 namespace ConsoleAppProject.App04
 {
@@ -30,6 +30,7 @@ namespace ConsoleAppProject.App04
         public NewsFeed()
         {
             posts = new List<Post>();
+
             MessagePost post = new MessagePost(AUTHOR, "I am a Liverpool fan");
             AddMessagePost(post);
 
@@ -58,12 +59,47 @@ namespace ConsoleAppProject.App04
             posts.Add(photo);
         }
 
+        public void RemovePost(int id)
+        {
+            Post post = FindPost(id);
+
+            if (post == null)
+            {
+                Console.WriteLine($" \nPost with ID = {id} does not exist!!\n");
+            }
+            else
+            {
+                Console.WriteLine($" \nThe following Post {id} has been removed!\n");
+
+                posts.Remove(post);
+                post.Display();
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Post FindPost(int id)
+        {
+            foreach(Post post in posts)
+            {
+                if(post.PostId == id)
+                {
+                    return post;
+                }
+            }
+
+            return null;
+        }
+
         ///<summary>
         /// Show the news feed. Currently: print the news feed details to the
         /// terminal. (To do: replace this later with display in web browser.)
         ///</summary>
         public void Display()
         {
+            ConsoleHelper.OutputTitle("Dispplaying All Posts");
+
             // display all text posts
             foreach (Post posts  in posts)
             {
