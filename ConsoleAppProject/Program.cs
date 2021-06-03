@@ -32,7 +32,7 @@ namespace ConsoleAppProject
 
         public static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Black;
+            //Console.ForegroundColor = ConsoleColor.Black;
 
             Console.WriteLine("BNU CO453 Applications Programming 2020-2021!");
             Console.WriteLine();
@@ -61,8 +61,9 @@ namespace ConsoleAppProject
             }
             else if (choiceNo == 4)
             {
-                MessagePost message = new MessagePost("Abdulla","hi");
-                message.Run();
+                //MessagePost message = new MessagePost("Abdulla","hi");
+                //message.Run();
+                app04.DisplayMenu();
             }
         }
     }

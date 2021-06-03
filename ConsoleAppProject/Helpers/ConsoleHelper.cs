@@ -50,9 +50,17 @@ namespace ConsoleAppProject.Helpers
             }
         }
 
-        internal static int SelectChoices(object choices)
+        public static int SelectChoices(string [] choices)
         {
-            throw new NotImplementedException();
+            // Display all the choices
+
+            DisplayChoices(choices);
+
+            // Get the user's choice
+
+            int choiceNo = (int)InputNumber("\n Please enter your choice > ",
+                                            1, choices.Length);
+            return choiceNo;
         }
 
 
@@ -134,7 +142,7 @@ namespace ConsoleAppProject.Helpers
             Console.WriteLine(" ---------------------------------" +
                 "\n");
 
-            Console.ForegroundColor = ConsoleColor.Black;
+            //Console.ForegroundColor = ConsoleColor.Black;
         }
 
         /// <summary>
@@ -143,7 +151,7 @@ namespace ConsoleAppProject.Helpers
         /// </summary>
         public static void OutputTitle(string title)
         {
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.Yellow;
 
             Console.WriteLine($"\n {title}");
             Console.Write(" ");
