@@ -98,7 +98,8 @@ namespace ConsoleAppProject.App04
 
         internal static double GetNumberOfPosts()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return 0;
         }
 
         ///<summary>

@@ -61,8 +61,6 @@ namespace ConsoleAppProject
             }
             else if (choiceNo == 4)
             {
-                //MessagePost message = new MessagePost("Abdulla","hi");
-                //message.Run();
                 app04.DisplayMenu();
             }
         }
